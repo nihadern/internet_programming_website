@@ -1,0 +1,77 @@
+body, html {background-color: #121212; margin: 0; bottom: 0; font-family: Arial, Helvetica, sans-serif, sans-serif;}
+.center {display: block; margin-left: auto; margin-right: auto; width: 50%;}
+#header, #black_bar, #gold_bar, #page_wrapper {width: 100%;}
+table, th, td {
+    color: white;
+    border: 1px solid white;
+    border-collapse: collapse;
+ }
+#content {
+        display: block; 
+        background-color: #121212; 
+        padding: 5%;
+        padding-top: 2%;
+        border-left: auto; 
+        border-right: auto;
+        color: white;
+}
+
+#content h1:first-child {margin-top: 0;}
+#footer { text-align: left; 
+            margin: 30px 0;
+        background-color: grey;
+        color: white;}
+/* #picture {width:360px; height:360px; margin-left: auto;margin-right: auto;} */
+
+p {
+    max-width: 100%;
+}
+
+img {
+    width: 100%;
+}
+.nav-ul {
+    max-width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.nav-li {
+float: left;
+}
+
+li a {
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+background-color: #4287f5;
+}
+
+.profile {
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+}
+
+.column {
+    text-align: left;
+    float: left;
+    width: 30%;
+}
+  
+/* Clear floats after the columns */
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+

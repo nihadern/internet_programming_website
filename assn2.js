@@ -42,6 +42,10 @@ function notBad(str){
     return out;
 }
 
+function changeTheme(theme){
+    document.getElementById("content1").className = theme;
+}
+
 document.getElementById("square").onclick = function(){
     const sq_num = document.getElementById("square_num");
     sq_num.value = squareNumber(sq_num.value);
@@ -72,6 +76,7 @@ document.getElementById("add_cell").onclick = function(){
     row.appendChild(col3);
     let input = document.createElement("input");
     input.id = cells.children.length;
+    input.style = "width:99.5%";
     input.oninput = function(e){
         let change_id = parseInt(e.target.id);
         const cells =  document.getElementById("cells").children;
@@ -79,6 +84,7 @@ document.getElementById("add_cell").onclick = function(){
     };
     if(memory.length>0){
         input.value = memory.pop();
+        col3.innerText = input.value.length;
     }
     col2.appendChild(input);
     cells.appendChild(row);
@@ -88,19 +94,29 @@ document.getElementById("sort").onclick = function(){
     const cells =  document.getElementById("cells");
     let strs = [];
     for(let i =1;i<cells.children.length;i++){
-        strs.push(cells.children[i].children[1].children[0].value);
+        let str = cells.children[i].children[1].children[0].value;
+        if(str.length>0){
+            strs.push(str);
+        }
     }
     strs.sort();
-    for(let i =1;i<strs.length;i++){
-        cells.children[i].children[1].children[0].value = strs[i];
-        cells.children[i].children[2].innerText = strs[i].length
+    for(let i =0;i<cells.children.length;i++){
+        if(i<strs.length){
+            cells.children[i+1].children[1].children[0].value = strs[i];
+            cells.children[i+1].children[2].innerText = strs[i].length;
+        }
+        else{
+            cells.children[i+1].children[1].children[0].value = "";
+            cells.children[i+1].children[2].innerText = 0;
+        }
+        
     }
 }
 
 document.getElementById("rm_cell").onclick = function(){
     const cells = document.getElementById("cells").childNodes
     if(cells.length===3){
-        alert("No cells to remove!");
+        alert("Cannot remove any more cells!");
         return;
     }
     let last = cells[cells.length-1]

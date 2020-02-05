@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="index.css">
     
-    <title>Assignments</title>
+    <title>Assignment 2</title>
 </head>
 <body>
     <ul class="nav-ul">
@@ -17,19 +17,47 @@
         <li class="nav-li"><a href="/~nkalathi/projects.html">Projects</a></li>
         <li class="nav-li"><a href="/~nkalathi/assignments.html">Assignments</a></li>
       </ul>
-      <div id="content"> 
-        <h1>Assignment 2</h1>  
-        <h2>Square number</h2>
-        <input type="number" id="square_num">
-        <button id="square">Square number</button>
-        <h2>Fix start</h2>
-        <input type="text" id="fix_start_text">
-        <button id="fix_start">Fix start</button>
-        <h2>Not Bad</h2>
-        <input type="text" id="not_bad_text">
-        <button id="not_bad">Not bad</button>
-        <h2>Dynamic cell creation and sorting</h2>
-          <table id="cells">
+      <div id="content1" class="content"> 
+        <div class="center">
+          <h2>Themes</h2>
+          <button onclick="changeTheme('content')">Normal</button>
+          <button class="colorRed" onclick="changeTheme('colorRed')">Theme 1</button>
+          <button class="colorGrey" onclick="changeTheme('colorGrey')">Theme 2</button>
+          <button class="colorBlack" onclick="changeTheme('colorBlack')">Theme 3</button>
+          <button class="colorBrown" onclick="changeTheme('colorBrown')">Theme 4</button>
+          <button class="colorBlue" onclick="changeTheme('colorBlue')">Theme 5</button>
+          <button class="colorWhite" onclick="changeTheme('colorWhite')">Theme 6</button>
+          <button class="colorGreen" onclick="changeTheme('colorGreen')">Theme 7</button>
+          <button class="colorOrange" onclick="changeTheme('colorOrange')">Theme 8</button>
+          <button class="colorPink" onclick="changeTheme('colorPink')">Theme 9</button>
+          <button class="colorYellow" onclick="changeTheme('colorYellow')">Theme 10</button>
+
+
+          <h2>Square number</h2>
+          <input type="number" id="square_num">
+          <button id="square">Square number</button>
+        </div>
+        <br/>
+        <div class="center">
+          <h2>Fix start</h2>
+          <input type="text" id="fix_start_text">
+          <button id="fix_start">Fix start</button>
+        </div>
+        <br/>
+        <div class="center">
+          <h2>Not Bad</h2>
+          <input type="text" id="not_bad_text">
+          <button id="not_bad">Not bad</button>
+        </div>
+        <br/>
+        <div class="center">
+        
+          <h2>Dynamic cell creation and sorting</h2>
+            <button class="large" id="add_cell">Add cell</button>  
+            <button class="large" id="rm_cell">Remove cell</button>
+            <button class="large" id="sort">Sort</button>
+          <br/><br/>
+          <table id="cells" style="width:100%">
             <tr>
                 <th>#</th>
                 <th>Text</th>
@@ -37,10 +65,8 @@
             </tr>
 
           </table>
-          <br/>
-          <button id="add_cell">Add cell</button>  
-          <button id="rm_cell">Remove cell</button>
-          <button id="sort">Sort</button>
+        </div>
+    
         
       </div>
 

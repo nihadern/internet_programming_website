@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+    <title>Assignments</title>
+</head>
+<body>
+    <ul class="nav-ul">
+        <li class="nav-li"><a href="/~nkalathi/">Home</a></li>
+        <li class="nav-li"><a href="https://gitlab.com/nihadkalathingal">GitLab</a></li>
+        <li class="nav-li"><a href="https://github.com/nihadern">GitHub</a></li>
+        <li class="nav-li"><a href="/~nkalathi/photo_gallery.html">Photo Gallery</a></li>
+        <li class="nav-li"><a href="/~nkalathi/projects.html">Projects</a></li>
+        <li class="nav-li"><a href="/~nkalathi/assignments.html">Assignments</a></li>
+      </ul>
+    <br/>
+    <div id="content"> 
+        <h1>Part 1</h1>
+        <!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #66d9ef">print</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Hello, World!&quot;</span><span style="color: #f8f8f2">)</span></pre></div>   
+        <h3>Result:</h3> 
+        <!-- HTML generated using hilite.me --><div style="background: black; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">Hello,</span> <span style="color: #f92672">World!</span></pre></div>  
+        <h1>Part 2 </h1>
+        <!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">SUPER_SERCET_WORD</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&quot;word&quot;</span>
+<span style="color: #f8f8f2">word</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">list(SUPER_SERCET_WORD</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">lower())</span>
+<span style="color: #f8f8f2">current_guess</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">[</span><span style="color: #e6db74">&quot;_&quot;</span> <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">range(len(word))]</span>
+
+
+<span style="color: #66d9ef">def</span> <span style="color: #a6e22e">guessLetter</span><span style="color: #f8f8f2">(letter:</span> <span style="color: #f8f8f2">str)</span> <span style="color: #f92672">-&gt;</span> <span style="color: #f8f8f2">bool:</span>
+    <span style="color: #f8f8f2">letter</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">letter</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">lower()</span>
+    <span style="color: #66d9ef">try</span><span style="color: #f8f8f2">:</span>
+        <span style="color: #f8f8f2">letter_index</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">word</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">index(letter)</span>
+        <span style="color: #66d9ef">print</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Congratulations! You guessed a letter!&quot;</span><span style="color: #f8f8f2">)</span>
+        <span style="color: #f8f8f2">current_guess[letter_index]</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">word[letter_index]</span>
+        <span style="color: #f8f8f2">unguessed</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">current_guess</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">count(</span><span style="color: #e6db74">&quot;_&quot;</span><span style="color: #f8f8f2">)</span>
+        <span style="color: #66d9ef">print</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;You have {} letters left&quot;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">format(unguessed))</span>
+        <span style="color: #66d9ef">print</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;&#39;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">join(current_guess))</span>
+        <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(unguessed</span> <span style="color: #f92672">==</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">):</span>
+            <span style="color: #66d9ef">print</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Congratulations! You have won the game!&quot;</span><span style="color: #f8f8f2">)</span>
+            <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">True</span>
+        <span style="color: #66d9ef">else</span><span style="color: #f8f8f2">:</span>
+            <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">False</span>
+    <span style="color: #66d9ef">except</span> <span style="color: #a6e22e">ValueError</span><span style="color: #f8f8f2">:</span>
+        <span style="color: #66d9ef">print</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Sorry! That guess is wrong!&quot;</span><span style="color: #f8f8f2">)</span>
+        <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">False</span>
+
+
+<span style="color: #f8f8f2">guessed</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span>
+
+<span style="color: #66d9ef">while</span> <span style="color: #f92672">not</span> <span style="color: #f8f8f2">guessed:</span>
+    <span style="color: #f8f8f2">guessed</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">guessLetter(input(</span><span style="color: #e6db74">&quot;Guess a letter: &quot;</span><span style="color: #f8f8f2">))</span>
+</pre></div>
+
+        <h3>Result:</h3> 
+          <!-- HTML generated using hilite.me --><div style="background: black; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">Here is the result:
+Guess a letter: e
+Sorry! That guess is wrong!
+Guess a letter: i
+Sorry! That guess is wrong!
+Guess a letter: a
+Sorry! That guess is wrong!
+Guess a letter: o
+Congratulations! You guessed a letter!
+You have 3 letters left
+_o__
+Guess a letter: w
+Congratulations! You guessed a letter!
+You have 2 letters left
+wo__
+Guess a letter: r
+Congratulations! You guessed a letter!
+You have 1 letters left
+wor_
+Guess a letter: d
+Congratulations! You guessed a letter!
+You have 0 letters left
+word
+Congratulations! You have won the game!
+</pre></div>
+
+        <h1>Part 3 </h1>
+        <!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">import</span> <span style="color: #f8f8f2">json</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">requests</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">datetime</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">datetime</span>
+
+<span style="color: #66d9ef">with</span> <span style="color: #f8f8f2">open(</span><span style="color: #e6db74">&quot;api.txt&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&#39;r&#39;</span><span style="color: #f8f8f2">)</span> <span style="color: #66d9ef">as</span> <span style="color: #f8f8f2">f:</span>
+    <span style="color: #f8f8f2">API_KEY</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">f</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">read()</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">replace(</span><span style="color: #e6db74">&quot; &quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;&quot;</span><span style="color: #f8f8f2">)</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">replace(</span><span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;&quot;</span><span style="color: #f8f8f2">)</span>
+
+<span style="color: #f8f8f2">API</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&#39;https://api.openweathermap.org/data/2.5/weather?zip={},{}&amp;appid={}&#39;</span>
+<span style="color: #f8f8f2">data</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">requests</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">get(API</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">format(</span><span style="color: #ae81ff">30144</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&#39;us&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">API_KEY))</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">json()</span>
+
+<span style="color: #66d9ef">print</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Name:&quot;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">ljust(</span><span style="color: #ae81ff">25</span><span style="color: #f8f8f2">)</span> <span style="color: #f92672">+</span> <span style="color: #e6db74">&quot;{}&quot;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">format(data[</span><span style="color: #e6db74">&quot;name&quot;</span><span style="color: #f8f8f2">]))</span>
+<span style="color: #f8f8f2">temp</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">round(</span><span style="color: #ae81ff">1.8</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">(data[</span><span style="color: #e6db74">&quot;main&quot;</span><span style="color: #f8f8f2">][</span><span style="color: #e6db74">&quot;temp&quot;</span><span style="color: #f8f8f2">]</span> <span style="color: #f92672">-</span> <span style="color: #ae81ff">273</span><span style="color: #f8f8f2">)</span><span style="color: #f92672">+</span><span style="color: #ae81ff">32</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">2</span><span style="color: #f8f8f2">)</span>
+<span style="color: #66d9ef">print</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Current temprature:&quot;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">ljust(</span><span style="color: #ae81ff">25</span><span style="color: #f8f8f2">)</span> <span style="color: #f92672">+</span> <span style="color: #e6db74">&quot;{} degrees Fahrenheit&quot;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">format(temp))</span>
+<span style="color: #66d9ef">print</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Atmospheric pressure:&quot;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">ljust(</span><span style="color: #ae81ff">25</span><span style="color: #f8f8f2">)</span> <span style="color: #f92672">+</span> <span style="color: #e6db74">&quot;{} hPa&quot;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">format(data[</span><span style="color: #e6db74">&#39;main&#39;</span><span style="color: #f8f8f2">][</span><span style="color: #e6db74">&#39;pressure&#39;</span><span style="color: #f8f8f2">]))</span>
+<span style="color: #f8f8f2">wind_speed</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">round(</span><span style="color: #ae81ff">2.23694</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">data[</span><span style="color: #e6db74">&#39;wind&#39;</span><span style="color: #f8f8f2">][</span><span style="color: #e6db74">&#39;speed&#39;</span><span style="color: #f8f8f2">],</span> <span style="color: #ae81ff">2</span><span style="color: #f8f8f2">)</span>
+<span style="color: #66d9ef">print</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Wind speed:&quot;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">ljust(</span><span style="color: #ae81ff">25</span><span style="color: #f8f8f2">)</span> <span style="color: #f92672">+</span> <span style="color: #e6db74">&quot;{} mph&quot;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">format(wind_speed))</span>
+<span style="color: #66d9ef">print</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Wind direction:&quot;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">ljust(</span><span style="color: #ae81ff">25</span><span style="color: #f8f8f2">)</span> <span style="color: #f92672">+</span> <span style="color: #f8f8f2">str(data[</span><span style="color: #e6db74">&quot;wind&quot;</span><span style="color: #f8f8f2">][</span><span style="color: #e6db74">&quot;deg&quot;</span><span style="color: #f8f8f2">]))</span>
+<span style="color: #f8f8f2">report_time</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">datetime</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">fromtimestamp(data[</span><span style="color: #e6db74">&quot;dt&quot;</span><span style="color: #f8f8f2">])</span>
+<span style="color: #f8f8f2">report_time</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">report_time</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">strftime(</span><span style="color: #e6db74">&quot;%Y-%m-%d %H:%M:%S&quot;</span><span style="color: #f8f8f2">)</span>
+<span style="color: #66d9ef">print</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Time of report:&quot;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">ljust(</span><span style="color: #ae81ff">25</span><span style="color: #f8f8f2">)</span> <span style="color: #f92672">+</span> <span style="color: #f8f8f2">str(report_time))</span>
+</pre></div>
+
+        <h3>Result:</h3> 
+        
+        <!-- HTML generated using hilite.me --><div style="background: #black; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">Current temprature:      57.2 degrees Fahrenheit
+Atmospheric pressure:    1018 hPa
+Wind speed:              4.7 mph
+Wind direction:          160
+Time of report:          2020-02-18 14:40:52
+</pre></div>
+
+    
+    </div>
+</body>
+</html>
